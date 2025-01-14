@@ -23,6 +23,9 @@ export default defineNuxtConfig({
     format: ['webp']
   },
   nitro: {
-    preset: 'cloudflare-pages'
+    preset: 'cloudflare-pages',
+    output: {
+      dir: './dist'
+    }
   }
 })
