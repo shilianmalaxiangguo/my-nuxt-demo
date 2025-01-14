@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'shadcn-nuxt',
-    'nuxt-lodash'
+    'nuxt-lodash',
+    '@nuxt/image',
   ],
   colorMode: {
     classSuffix: '',
@@ -16,5 +17,9 @@ export default defineNuxtConfig({
   shadcn: {
     prefix: '',
     componentDir: './components/ui'
+  },
+  image: {
+    quality: 80,
+    format: ['webp']
   }
 })
