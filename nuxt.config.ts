@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'shadcn-nuxt',
+    'nuxt-lodash'
   ],
   colorMode: {
     classSuffix: '',
