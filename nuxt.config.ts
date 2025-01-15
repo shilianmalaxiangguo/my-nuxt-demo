@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     'nuxt-lodash',
     '@nuxt/image',
+    '@nuxt/content'
   ],
   colorMode: {
     classSuffix: '',
@@ -26,6 +27,41 @@ export default defineNuxtConfig({
     preset: 'cloudflare-pages',
     output: {
       dir: './dist'
+    },
+    moduleSideEffects: ['shiki']
+  },
+  vite: {
+    build: {
+      manifest: true
+    },
+    optimizeDeps: {
+      exclude: ['@vueuse/core', 'shiki']
     }
-  }
+  },
+  content: {
+    highlight: {
+      theme: {
+        default: 'min-light',
+        dark: 'material-theme'
+      },
+      preload: [
+        'json',
+        'js',
+        'ts',
+        'html',
+        'css',
+        'vue',
+        'bash',
+        'markdown'
+      ]
+    },
+    markdown: {
+      mdc: true,
+      toc: {
+        depth: 3,
+        searchDepth: 3,
+      }
+    }
+  },
+
 })
