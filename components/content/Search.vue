@@ -42,7 +42,7 @@ const { data: articles } = await useAsyncData('articles', () =>
 )
 
 // 配置 Fuse.js
-const fuse = new Fuse(articles.value, {
+const fuse = new Fuse(articles.value || [], {
   keys: ['title', 'description', 'body'],
   threshold: 0.3,
   includeMatches: true
@@ -59,7 +59,7 @@ watch(searchQuery, (newQuery) => {
 
 // 处理选择结果
 const router = useRouter()
-const handleSelect = (item) => {
+const handleSelect = (item: any) => {
   router.push(item._path)
   showResults.value = false
   searchQuery.value = ''

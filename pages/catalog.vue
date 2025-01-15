@@ -92,6 +92,7 @@ import {
   AlertDescription 
 } from '@/components/ui/alert'
 
+// 确保有模板
 definePageMeta({
   layout: 'default'
 })
@@ -111,7 +112,7 @@ const groupByTags = (articles: any[]) => {
   
   articles.forEach(article => {
     const tags = article.tags || ['未分类']
-    tags.forEach(tag => {
+    tags.forEach((tag: string) => {
       if (!groups[tag]) {
         groups[tag] = []
       }
