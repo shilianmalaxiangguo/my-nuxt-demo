@@ -44,8 +44,8 @@
         @click="toggleTheme"
         class="hover:bg-primary/10 hover:text-primary"
       >
-        <SunIcon v-if="colorMode.value === 'dark'" class="h-5 w-5" />
-        <MoonIcon v-else class="h-5 w-5" />
+        <Icon v-if="colorMode.value === 'dark'" name="ph:sun-bold" class="h-5 w-5" />
+        <Icon v-else name="ph:moon-bold" class="h-5 w-5" />
       </Button>
     </div>
   </header>
@@ -61,7 +61,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
-import { SunIcon, MoonIcon } from 'lucide-vue-next'
+import { Icon } from '#components'
 
 const route = useRoute()
 const router = useRouter()

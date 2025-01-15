@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     'nuxt-lodash',
     '@nuxt/image',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxt/icon',
   ],
   colorMode: {
     classSuffix: '',

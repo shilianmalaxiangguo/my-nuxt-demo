@@ -18,7 +18,7 @@
       </CardHeader>
       <CardContent class="space-y-4">
         <div class="flex items-center gap-2">
-          <GithubIcon class="w-5 h-5" />
+          <Icon name="mdi:github" class="w-5 h-5" />
           <a 
             href="https://github.com/shilianmalaxiangguo" 
             target="_blank"
@@ -39,7 +39,7 @@
       <CardContent>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div v-for="tech in techStack" :key="tech.name" class="flex items-center gap-2 p-3 rounded-lg bg-card/50">
-            <component :is="tech.icon" class="w-5 h-5 text-primary" />
+            <Icon :name="tech.icon" class="w-5 h-5 text-primary" />
             <div>
               <div>{{ tech.name }}</div>
               <div class="text-xs text-muted-foreground">{{ tech.description }}</div>
@@ -58,7 +58,7 @@
         <blockquote class="border-l-4 border-primary pl-4 italic text-muted-foreground">
           <p>希望有富婆能看出保安的逞强</p>
           <footer class="mt-2 text-sm">
-            —— 一个爱做梦的保安
+            —— 爱你的保安
           </footer>
         </blockquote>
       </CardContent>
@@ -67,15 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import { 
-  GithubIcon, 
-  Code2Icon,
-  MonitorIcon,
-  FileCodeIcon,
-  PaintbrushIcon,
-  FileTextIcon,
-  BoxesIcon
-} from 'lucide-vue-next'
+import { Icon } from '#components'
 
 // Card 组件导入
 import { 
@@ -97,32 +89,32 @@ import {
 const techStack = [
   { 
     name: 'Nuxt 3', 
-    icon: Code2Icon,
+    icon: 'logos:nuxt-icon',
     description: '现代化的 Vue 框架'
   },
   { 
     name: 'Vue 3', 
-    icon: MonitorIcon,
+    icon: 'logos:vue',
     description: '渐进式 JavaScript 框架'
   },
   { 
     name: 'TypeScript', 
-    icon: FileCodeIcon,
+    icon: 'logos:typescript-icon',
     description: '类型安全的 JavaScript'
   },
   { 
     name: 'Tailwind CSS', 
-    icon: PaintbrushIcon,
+    icon: 'logos:tailwindcss-icon',
     description: '实用优先的 CSS 框架'
   },
   { 
     name: 'Shadcn Vue', 
-    icon: BoxesIcon,
+    icon: 'radix-icons:shadow',
     description: '精美的 UI 组件库'
   },
   { 
     name: '@nuxt/content', 
-    icon: FileTextIcon,
+    icon: 'ri:markdown-fill',
     description: '强大的文档处理引擎'
   }
 ]
