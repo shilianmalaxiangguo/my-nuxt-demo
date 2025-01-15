@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'Vue3-组合式函数'
-pubDate: 2024-04-16
+date: 2024-04-16
 description: 'Vue3-组合式函数'
 author: '保安'
 cover:

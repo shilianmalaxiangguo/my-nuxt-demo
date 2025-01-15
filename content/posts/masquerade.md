@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'masquerade'
-pubDate: 2024-03-04
+date: 2024-03-04
 description: 'masquerade'
 author: '保安'
 cover:

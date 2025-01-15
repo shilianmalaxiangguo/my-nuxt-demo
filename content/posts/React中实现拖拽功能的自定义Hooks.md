@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: "React中实现拖拽功能的自定义Hooks"
-pubDate:  "2024-03-31"
+date:  "2024-03-31"
 description: "React中实现拖拽功能的自定义Hooks"
 author: '保安'
 cover:

@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'Vue3-元组类型'
-pubDate: 2024-04-08
+date: 2024-04-08
 description: 'Vue3-元组类型'
 author: '保安'
 cover:

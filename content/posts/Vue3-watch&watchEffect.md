@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'Vue3-watch&watchEffect'
-pubDate: 2024-04-16
+date: 2024-04-16
 description: 'Vue3-watch&watchEffect'
 author: '保安'
 cover:

@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'flex1与height0;flexauto的关系'
-pubDate: 2024-12-23
+date: 2024-12-23
 description: 'flex1与height0;flexauto的关系'
 author: '保安'
 cover:

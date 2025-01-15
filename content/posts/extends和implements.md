@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'extends和implements'
-pubDate: 2025-01-06
+date: 2025-01-06
 description: 'extends和implements'
 author: '保安'
 cover:

@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: "react(四)-hooks闭包陷阱"
-pubDate:  "2024-03-21"
+date:  "2024-03-21"
 description: "react(四)-hooks闭包陷阱"
 author: '保安'
 cover:

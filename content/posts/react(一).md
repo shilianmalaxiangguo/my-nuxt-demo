@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: 'react(一)'
-pubDate: 2024-03-15
+date: 2024-03-15
 description: 'react(一)'
 author: '保安'
 cover:

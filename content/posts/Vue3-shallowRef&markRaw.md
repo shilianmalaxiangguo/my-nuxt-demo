@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkdownPost.astro'
 title: "Vue3-shallowRef&markRaw"
-pubDate:  "2024-04-24"
+date:  "2024-04-24"
 description: "Vue3-shallowRef&markRaw"
 author: '保安'
 cover:
