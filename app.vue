@@ -1,10 +1,10 @@
 <template>
   <div :class="{ 'dark': colorMode.value === 'dark' }">
-    <div class="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div class="min-h-screen bg-background text-foreground overflow-x-hidden flex flex-col">
       <LayoutHeader />
       
       <!-- 页面内容 -->
-      <main class="container py-6">
+      <main class="container py-6 flex-grow mb-16">
         <NuxtPage />
       </main>
     </div>
@@ -25,6 +25,9 @@ html {
 body {
   @apply overflow-x-hidden;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 可选：美化滚动条 */
