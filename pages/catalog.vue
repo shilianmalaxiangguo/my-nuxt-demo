@@ -37,7 +37,7 @@
             class="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30 backdrop-blur-sm"
           >
              <!-- 修改这里的 :to 属性 -->
-            <NuxtLink :to="`/posts/${encodeURIComponent(post._file.split('/').pop()?.replace(/\.md$/, '') || '')}`">
+            <NuxtLink :to="`${encodeURIComponent(post._file.split('/').pop()?.replace(/\.md$/, '') || '')}`">
               <CardHeader>
                 <CardTitle class="group-hover:text-primary transition-colors line-clamp-2 overflow-hidden text-ellipsis">
                   <template v-if="post.title.length > 20">
