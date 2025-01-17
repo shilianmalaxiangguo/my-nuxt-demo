@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<{
 </script>
 
 <template>
-  <div :class="cn('rounded-lg border bg-card text-card-foreground shadow-sm', props.class)">
+  <p :class="cn('text-sm text-muted-foreground', props.class)">
     <slot />
-  </div>
-</template>
+  </p>
+</template> 

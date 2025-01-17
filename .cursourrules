@@ -55,5 +55,6 @@
       - Use provide/inject for dependency injection when appropriate.
       - Implement custom composables for reusable logic.
       
+      Package Manager
+      - Use pnpm as the package manager; avoid using npm.
       Follow the official Nuxt.js and Vue.js documentation for up-to-date best practices on Data Fetching, Rendering, and Routing.
-      

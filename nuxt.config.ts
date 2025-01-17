@@ -64,5 +64,7 @@ export default defineNuxtConfig({
       }
     }
   },
-
+  build: {
+    transpile: ['fuse.js']
+  }
 })
