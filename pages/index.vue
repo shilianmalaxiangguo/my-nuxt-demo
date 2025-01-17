@@ -97,26 +97,26 @@
   height: 100%;
   background-color: #ffffff;
   
-  /* 使用多层渐变创造更丰富的点阵效果 */
+  /* 使用多层渐变创造更柔和的点阵效果 */
   background-image: 
-    /* 第一层点阵 - Nuxt 绿色 */
+    /* 第一层点阵 - 柔和的 Nuxt 绿色 */
     radial-gradient(
       circle at center,
-      #00DC82 4px,
+      rgba(0, 220, 130, 0.15) 4px,  /* 降低不透明度 */
       transparent 4px
     ),
-    /* 第二层点阵 - Vue 蓝绿色 */
+    /* 第二层点阵 - 淡化的 Vue 蓝绿色 */
     radial-gradient(
       circle at center,
       white 3px,
-      #42b883 3px,
-      #42b883 4px,
+      rgba(66, 184, 131, 0.1) 3px,  /* 降低不透明度 */
+      rgba(66, 184, 131, 0.1) 4px,
       transparent 4px
     ),
-    /* 第三层点阵 - 主题色变体 */
+    /* 第三层点阵 - 柔和的主题色 */
     radial-gradient(
       circle at center,
-      #059669 3px,
+      rgba(5, 150, 105, 0.08) 3px,  /* 降低不透明度 */
       transparent 3px
     );
   
@@ -133,22 +133,22 @@
 :root.dark .dots-pattern {
   background-color: #111827;
   background-image: 
-    /* 暗色模式下调整颜色亮度和透明度 */
+    /* 暗色模式下的柔和点阵 */
     radial-gradient(
       circle at center,
-      #00DC82 4px,
+      rgba(0, 220, 130, 0.1) 4px,  /* 调整暗色模式透明度 */
       transparent 4px
     ),
     radial-gradient(
       circle at center,
       #1f2937 3px,
-      #42b883 3px,
-      #42b883 4px,
+      rgba(66, 184, 131, 0.08) 3px,
+      rgba(66, 184, 131, 0.08) 4px,
       transparent 4px
     ),
     radial-gradient(
       circle at center,
-      #34d399 3px,
+      rgba(52, 211, 153, 0.06) 3px,
       transparent 3px
     );
 }
