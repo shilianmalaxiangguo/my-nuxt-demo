@@ -1,16 +1,7 @@
 <template>
-  <div class="min-h-screen flex flex-col w-full">
-    <div :class="{ 'dark': colorMode.value === 'dark' }">
-      <div class="flex-1 bg-background text-foreground w-full">
-        <LayoutHeader />
-        
-        <!-- 页面内容 -->
-        <main class="container py-6 flex-grow mb-16">
-          <NuxtPage />
-        </main>
-      </div>
-    </div>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">

@@ -1,11 +1,11 @@
 <template>
-  <div class="h-screen w-full overflow-hidden">
-    <!-- 圆点背景容器 -->
-    <div class="fixed inset-0">
-      <!-- 添加border来测试容器位置 -->
-      <div class="dots-pattern"></div>
-    </div>
-    
+  <!-- 背景容器 - 固定定位占满全屏 -->
+  <div class="fixed inset-0 -z-10">
+    <div class="dots-pattern"></div>
+  </div>
+
+  <!-- 内容区域 - 考虑 header 高度 -->
+  <div class="h-[calc(100vh-80px)] w-full">
     <!-- 主要内容 -->
     <div class="h-full w-full flex items-center justify-center px-4">
       <div class="max-w-4xl w-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-3xl p-8 shadow-sm animate-fade-in">
@@ -74,17 +74,14 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff; /* 亮色模式背景色 */
+  background-color: #ffffff;
   
-  /* 第一层圆点 - 实心主题色 */
   background-image: 
-    /* 主题色实心圆点 */
     radial-gradient(
       circle at center,
       #059669 4px,
       transparent 4px
     ),
-    /* 白色圆点带边框 */
     radial-gradient(
       circle at center,
       white 3px,
@@ -93,11 +90,10 @@
       transparent 4px
     );
   
-  /* 设置圆点大小和位置 */
-  background-size: 40px 40px;
-  background-position: 
-    0 0,    /* 第一层圆点位置 */
-    20px 20px;  /* 第二层圆点位置 */
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+  
+  animation: movePattern 5s linear infinite;
 }
 
 /* 暗色模式样式 */
@@ -116,6 +112,20 @@
       #34d399 4px,
       transparent 4px
     );
+}
+
+/* 更新动画关键帧中的位置值 */
+@keyframes movePattern {
+  from {
+    background-position: 
+      0 0,
+      14px 14px;
+  }
+  to {
+    background-position: 
+      -28px -28px,
+      -14px -14px;
+  }
 }
 
 :root {

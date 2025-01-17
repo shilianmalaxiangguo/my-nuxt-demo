@@ -1,6 +1,6 @@
 <template>
-  <div class="relative">
-    <header class="sticky top-0 z-50 w-full h-[60px] border-b backdrop-blur-sm bg-background/80 supports-[backdrop-filter]:bg-background/60">
+  <div class="fixed top-0 left-0 right-0 z-50 w-full">
+    <header class="h-[60px] border-b backdrop-blur-sm bg-background/80 supports-[backdrop-filter]:bg-background/60">
       <div class="container flex items-center h-full px-4">
         <!-- 左侧标题 -->
         <h1 class="text-xl font-bold text-primary shrink-0">博客 Blog</h1>
@@ -214,7 +214,22 @@ const isSearchOpen = ref(false)
 const searchInput = ref<HTMLInputElement>()
 const mobileSearchInput = ref<HTMLInputElement>()
 
-// Fuse.js 配置
+// 修复 Fuse.js 的类型问题
+interface SearchResult {
+  item: {
+    _path: string;
+    title: string;
+    description: string;
+    _raw: string;
+  };
+  matches: Array<{
+    indices: Array<[number, number]>;
+    key: string;
+    value: string;
+  }>;
+}
+
+// Fuse.js 配置修改
 const fuse = new Fuse(posts.value || [], {
   keys: [
     { 
@@ -235,8 +250,7 @@ const fuse = new Fuse(posts.value || [], {
   useExtendedSearch: true,
   location: 0,
   distance: 0,
-  shouldSort: true,
-  maxPatternLength: 64
+  shouldSort: true
 })
 
 // 检查字符是否是单词边界
@@ -285,9 +299,9 @@ const searchResults = computed(() => {
 })
 
 // 高亮匹配内容
-const highlightMatch = (match?: { indices: Array<[number, number]>, value: string }) => {
-  if (!match) return ''
-  if (!match.indices.length) return match.value
+const highlightMatch = (match?: { indices: Array<[number, number]>; value: string; key?: string }) => {
+  if (!match?.value) return ''
+  if (!match.indices?.length) return match.value
 
   let highlighted = ''
   let lastIndex = 0
